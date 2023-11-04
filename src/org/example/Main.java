@@ -14,7 +14,7 @@ public class Main {
                 sc.nextLine();
 
 
-            while (sc.hasNextLine())
+            while (sc.hasNextLine())          //we should get rid of this code
             {
                 String line = sc.nextLine();
                 String [] tokens = line.split(",");
