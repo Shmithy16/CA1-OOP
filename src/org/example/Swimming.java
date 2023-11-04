@@ -1,2 +1,5 @@
-package org.example;public class Swimming {
+package org.example;
+
+public class Swimming {
+
 }
