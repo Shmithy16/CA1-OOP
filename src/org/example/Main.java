@@ -14,13 +14,52 @@ public class Main {
         Collections.sort(activities_array, new Comparator<Activitys>() {
             @Override
             public int compare(Activitys o1, Activitys o2) {
+                if (o1.getCalories() < o2.getCalories()) return 1;
+                if (o1.getCalories() > o2.getCalories()) return -1;
+                return 0;
+            }
+        });
+
+        System.out.println("\nSort calories descending:");
+        for (Activitys activity: activities_array){
+            System.out.println(activity);
+        }
+
+        Collections.sort(activities_array, new Comparator<Activitys>() {
+            @Override
+            public int compare(Activitys o1, Activitys o2) {
+                return o1.getDate().compareTo(o2.getDate());
+            }
+        });
+
+        System.out.println("\nSort date ascending:");
+        for (Activitys activity: activities_array){
+            System.out.println(activity);
+        }
+
+        Collections.sort(activities_array, new Comparator<Activitys>() {
+            @Override
+            public int compare(Activitys o1, Activitys o2) {
+                return -o1.getDate().compareTo(o2.getDate());
+            }
+        });
+
+        System.out.println("\nSort date descending:");
+        for (Activitys activity: activities_array){
+            System.out.println(activity);
+        }
+
+
+        Collections.sort(activities_array, new Comparator<Activitys>() {
+            @Override
+            public int compare(Activitys o1, Activitys o2) {
                 if (o1.getDuration() < o2.getDuration()) return 1;
                 if(o1.getDuration() > o2.getDuration()) return -1;  //Sort descending
                 return 0;
             }
         });
 
-        System.out.println("Sort duration descending:");
+        System.out.println("\nSort duration descending:");
         for (Activitys activity: activities_array){
             System.out.println(activity);
         }
@@ -34,34 +73,24 @@ public class Main {
             }
         });
 
-        System.out.println("Sort duration ascending:");
+        System.out.println("\nSort duration ascending:");
         for (Activitys activity: activities_array){
             System.out.println(activity);
         }
+
 
         Collections.sort(activities_array, new Comparator<Activitys>() {
             @Override
             public int compare(Activitys o1, Activitys o2) {
-                return o1.getDate().compareTo(o2.getDate());
+                return o1.getName().compareTo(o2.getName());
             }
         });
 
-        System.out.println("Sort date ascending:");
+        System.out.println("\nSort activity type ascending:");
         for (Activitys activity: activities_array){
             System.out.println(activity);
         }
 
-        Collections.sort(activities_array, new Comparator<Activitys>() {
-            @Override
-            public int compare(Activitys o1, Activitys o2) {
-                return -o1.getDate().compareTo(o2.getDate());
-            }
-        });
-
-        System.out.println("Sort date descending:");
-        for (Activitys activity: activities_array){
-            System.out.println(activity);
-        }
     }
 }
 

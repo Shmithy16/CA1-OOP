@@ -12,8 +12,8 @@ abstract class Activitys  {
     private int ahr;
     public double kph;
     private double hours;
-    private double energy;
     private double calories;
+    private String Name;
 
     public Activitys(Date date, double duration, double distance, int ahr) {
         this.date = date;
@@ -56,12 +56,45 @@ abstract class Activitys  {
         this.ahr = ahr;
     }
 
+    public double getKph() {
+        return kph;
+    }
+
+    public void setKph(double kph) {
+        this.kph = kph;
+    }
+
+    public double getHours() {
+        return hours;
+    }
+
+    public void setHours(double hours) {
+        this.hours = hours;
+    }
+
+    public double getCalories() {
+        return calories;
+    }
+
+    public void setCalories(double calories) {
+        this.calories = calories;
+    }
+
+    public String getName() {
+        return Name;
+    }
+
+    public void setName(String name) {
+        Name = name;
+    }
+
     @Override
     public String toString() {
         return  "date = " + date +
                 ", duration = " + duration +
                 ", distance = " + distance +
                 ", ahr = " + ahr +
-                ", kph = " + String.format("%.3f",kph) ;
+                ", kph = " + String.format("%.3f",kph) +
+                ", calories = " + String.format("%.2f",calories);
     }
 }

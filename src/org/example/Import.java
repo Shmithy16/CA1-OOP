@@ -14,6 +14,8 @@ public class Import {
     public ArrayList<Activitys> ActivityReader(String fileName) {
 
         ArrayList<Activitys> activities_Total = new ArrayList<Activitys>();
+
+
         SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
 
         try (Scanner sc = new Scanner(new File("activity_data_10.csv"))) {
@@ -36,12 +38,18 @@ public class Import {
                 double distance = Double.parseDouble(activity[3]);
                 int ahr = Integer.parseInt(activity[4]);
 
-                if (activityType.equals("Running"))
+                if (activityType.equals("Running")) {
                     activities_Total.add(new Running(date, duration, distance, ahr));
-                else if (activityType.equals("Swimming"))
+
+                }
+                else if (activityType.equals("Swimming")) {
                     activities_Total.add(new Swimming(date, duration, distance, ahr));
-                else if (activityType.equals("Cycling"))
+
+                }
+                else if (activityType.equals("Cycling")) {
                     activities_Total.add(new Cycling(date, duration, distance, ahr));
+
+                }
             }
 
         } catch (FileNotFoundException exception) {
