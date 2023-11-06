@@ -28,6 +28,6 @@ public class Swimming extends Activitys {
 
     @Override
     public String toString() {
-        return "Swimming; " + "energy = " + energy + super.toString();
+        return "Swimming; " + super.toString() + ", energy = " + energy;
     }
 }

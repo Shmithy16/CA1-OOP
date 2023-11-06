@@ -22,6 +22,6 @@ public class Cycling extends Activitys {
 
     @Override
     public String toString() {
-        return "Cycling; " +  "energy = " + energy + super.toString();
+        return "Cycling; "  + super.toString() +  ", energy = " + energy;
     }
 }

@@ -4,7 +4,7 @@ import java.util.Date;
 import java.text.SimpleDateFormat;
 import java.text.ParseException;
 //implements Comparable <Activitys>
-public class Activitys  {
+abstract class Activitys  {
 
     private Date date;
     private double duration;
@@ -58,11 +58,10 @@ public class Activitys  {
 
     @Override
     public String toString() {
-        return ", date = " + date +
+        return  "date = " + date +
                 ", duration = " + duration +
                 ", distance = " + distance +
                 ", ahr = " + ahr +
-                ", kph = " + String.format("%.3f",kph) +
-                '\n';
+                ", kph = " + String.format("%.3f",kph) ;
     }
 }
