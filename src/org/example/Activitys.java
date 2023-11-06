@@ -3,14 +3,14 @@ package org.example;
 import java.util.Date;
 import java.text.SimpleDateFormat;
 import java.text.ParseException;
-
-public class Activitys implements Comparable <Activitys> {
+//implements Comparable <Activitys>
+public class Activitys  {
 
     private Date date;
     private double duration;
     private double distance;
     private int ahr;
-    private double kph;
+    public double kph;
     private double hours;
     private double energy;
     private double calories;
@@ -58,7 +58,7 @@ public class Activitys implements Comparable <Activitys> {
 
     @Override
     public String toString() {
-        return "date = " + date +
+        return ", date = " + date +
                 ", duration = " + duration +
                 ", distance = " + distance +
                 ", ahr = " + ahr +

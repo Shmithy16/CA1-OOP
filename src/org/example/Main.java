@@ -13,7 +13,7 @@ public class Main {
         Import object = new Import();
         System.out.println(object.ActivityReader("activity_data_10.csv").toString());
 
-        Collections.sort(object, Comparator.comparingDouble(Activitys::getDuration));
+        //Collections.sort(object, Comparator.comparingDouble(Activitys::getDuration));
     }
 
 
