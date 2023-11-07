@@ -10,6 +10,9 @@ public class Main {
     public static void main (String[] args){
         Import object = new Import();
         ArrayList<Activitys> activities_array = object.ActivityReader("activity_data_10.csv");
+        int count = 0;
+        double cal_count=0;
+        double average_cal=0;
 
         Collections.sort(activities_array, new Comparator<Activitys>() {
             @Override
@@ -23,6 +26,8 @@ public class Main {
         System.out.println("\nSort calories descending:");
         for (Activitys activity: activities_array){
             System.out.println(activity);
+            count++;
+            cal_count = cal_count+ activity.getCalories();
         }
 
         Collections.sort(activities_array, new Comparator<Activitys>() {
@@ -91,6 +96,51 @@ public class Main {
             System.out.println(activity);
         }
 
+        Collections.sort(activities_array, new Comparator<Activitys>() {
+            @Override
+            public int compare(Activitys o1, Activitys o2) {
+                if (o1.getDistance() < o2.getDistance()) return 1;
+                if(o1.getDistance() > o2.getDistance()) return -1;  //Sort descending
+                return 0;
+            }
+        });
+
+        System.out.println("\nSort distance descending:");
+        for (Activitys activity: activities_array){
+            System.out.println(activity);
+        }
+        Collections.sort(activities_array, new Comparator<Activitys>() {
+            @Override
+            public int compare(Activitys o1, Activitys o2) {
+                if (o1.getDistance() > o2.getDistance()) return 1;
+                if(o1.getDistance() < o2.getDistance()) return -1;  //Sort ascending
+                return 0;
+            }
+        });
+
+        System.out.println("\nSort distance ascending:");
+        for (Activitys activity: activities_array){
+            System.out.println(activity);
+        }
+
+        average_cal = cal_count/count;
+        System.out.println("\n Average calories burned: " + average_cal);
+
+
+//        for( Activitys activity: activities_array){
+//            if (activity.getName() == "Swimming"){
+//
+//                System.out.println("\n Average distance" + average);
+//            }
+//            else if(activity.getName() == "Running"){
+//                average = dur/count;
+//                System.out.println("\n Average distance" + average);
+//            }
+//            else{
+//                average = dur/count;
+//                System.out.println("\n Average distance " + average);
+            //}
+        //}
     }
 }
 

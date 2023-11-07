@@ -14,6 +14,7 @@ abstract class Activitys  {
     private double hours;
     private double calories;
     private String Name;
+    private double count;
 
     public Activitys(Date date, double duration, double distance, int ahr) {
         this.date = date;
@@ -86,6 +87,14 @@ abstract class Activitys  {
 
     public void setName(String name) {
         Name = name;
+    }
+
+    public void averageDistance(){
+        double dist = + this.distance;
+    }
+
+    public double getCount() {
+        return count;
     }
 
     @Override
