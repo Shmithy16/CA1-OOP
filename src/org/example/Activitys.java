@@ -14,7 +14,7 @@ abstract class Activitys  {
     private double hours;
     private double calories;
     private String Name;
-    private double count;
+
 
     public Activitys(Date date, double duration, double distance, int ahr) {
         this.date = date;
@@ -93,8 +93,8 @@ abstract class Activitys  {
         double dist = + this.distance;
     }
 
-    public double getCount() {
-        return count;
+    public static int compareByName(Activitys a1, Activitys a2) {
+        return a1.Name.compareTo(a2.Name);
     }
 
     @Override
