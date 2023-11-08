@@ -1,7 +1,5 @@
 package org.example;
 
-import org.w3c.dom.ls.LSOutput;
-
 import java.io. * ;
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -9,19 +7,17 @@ import java.util.Date;
 import java.text.SimpleDateFormat;
 import java.text.ParseException;
 
-public class Import {
+public class Read_from_csv {
 
-    public ArrayList<Activitys> ActivityReader(String fileName) {
+    public ArrayList<Activity> ActivityReader(String fileName) {
 
-        ArrayList<Activitys> activities_Total = new ArrayList<Activitys>();
-
+        ArrayList<Activity> activities_Total = new ArrayList<Activity>();
 
         SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
 
         try (Scanner sc = new Scanner(new File("activity_data_10.csv"))) {
             if (sc.hasNextLine())
                 sc.nextLine();
-
 
             while (sc.hasNextLine()) {
                 String line = sc.nextLine();

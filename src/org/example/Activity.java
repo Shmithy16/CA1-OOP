@@ -1,10 +1,9 @@
 package org.example;
 
 import java.util.Date;
-import java.text.SimpleDateFormat;
-import java.text.ParseException;
-//implements Comparable <Activitys>
-abstract class Activitys  {
+
+//
+abstract class Activity implements Comparable <Activity> {
 
     private Date date;
     private double duration;
@@ -14,87 +13,50 @@ abstract class Activitys  {
     private double hours;
     private double calories;
     private String Name;
+    private String Energy;
 
-
-    public Activitys(Date date, double duration, double distance, int ahr) {
+    public Activity(Date date, double duration, double distance, int ahr) {
         this.date = date;
         this.duration = duration;
         this.distance = distance;
         this.ahr = ahr;
         this.hours = duration/60;
         this.kph = distance/hours;
+        this.Energy = "";
     }
 
+    //we kept those getters and setters that we actually use
     public Date getDate() {
         return date;
     }
-
-    public void setDate(Date date) {
-        this.date = date;
-    }
-
     public double getDuration() {
         return duration;
     }
-
-    public void setDuration(double duration) {
-        this.duration = duration;
-    }
-
     public double getDistance() {
         return distance;
     }
-
-    public void setDistance(double distance) {
-        this.distance = distance;
-    }
-
-    public int getAhr() {
-        return ahr;
-    }
-
-    public void setAhr(int ahr) {
-        this.ahr = ahr;
-    }
-
-    public double getKph() {
-        return kph;
-    }
-
-    public void setKph(double kph) {
-        this.kph = kph;
-    }
-
-    public double getHours() {
-        return hours;
-    }
-
-    public void setHours(double hours) {
-        this.hours = hours;
-    }
-
     public double getCalories() {
         return calories;
     }
-
     public void setCalories(double calories) {
         this.calories = calories;
     }
-
     public String getName() {
         return Name;
     }
-
     public void setName(String name) {
         Name = name;
     }
-
-    public void averageDistance(){
-        double dist = + this.distance;
+    public String getEnergy() {
+        return Energy;
+    }
+    public void setEnergy(String energy) {
+        Energy = energy;
     }
 
-    public static int compareByName(Activitys a1, Activitys a2) {
-        return a1.Name.compareTo(a2.Name);
+    @Override
+    public int compareTo(Activity a) {
+        return this.Name.compareTo(a.Name);
     }
 
     @Override
@@ -104,6 +66,7 @@ abstract class Activitys  {
                 ", distance = " + distance +
                 ", ahr = " + ahr +
                 ", kph = " + String.format("%.3f",kph) +
-                ", calories = " + String.format("%.2f",calories);
+                ", calories = " + String.format("%.2f",calories) +
+                ", energy = " + Energy;
     }
 }

@@ -1,11 +1,8 @@
 package org.example;
 
 import java.util.Date;
-import java.text.SimpleDateFormat;
-import java.text.ParseException;
 
-public class Swimming extends Activitys {
-    private String name;
+public class Swimming extends Activity {
     private String energy;
     private double intensity;
 
@@ -13,23 +10,23 @@ public class Swimming extends Activitys {
         super(date, duration, distance, ahr);
 
         if (this.kph>=0.5 && this.kph<1.25){
-            this.energy = "Very Light";
+            super.setEnergy("Very Light");
             this.intensity = 5.0;
         }
         else if (this.kph>=1.25 && this.kph<2){
-            this.energy = "Light";
+            super.setEnergy("Light");
             this.intensity = 6.3;
         }
         else if (this.kph>=2 && this.kph<2.75){
-            this.energy = "Moderate";
+            super.setEnergy("Moderate");
             this.intensity = 7.6;
         }
         else if (this.kph>=2.75 && this.kph<3.5){
-            this.energy = "Vigorous";
+            super.setEnergy("Vigorous");
             this.intensity = 8.9;
         }
         else if (this.kph>3.5){
-            this.energy = "Very Vigorous";
+            super.setEnergy("Very Vigorous");
             this.intensity = 10.2;
         }
 
@@ -37,10 +34,8 @@ public class Swimming extends Activitys {
         super.setName("Swimming");
     }
 
-
-
     @Override
     public String toString() {
-        return "Swimming; " + super.toString() + ", energy = " + energy;
+        return "Swimming; " + super.toString();
     }
 }
