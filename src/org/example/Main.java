@@ -82,6 +82,8 @@ public class Main {
                     }
                     System.out.println("");
 
+                }else{
+                    System.out.println("Invalid input");
                 }
 
             }else if(answer == 3){
@@ -125,6 +127,8 @@ public class Main {
 
                     System.out.println("");
 
+                }else{
+                    System.out.println("Invalid input");
                 }
 
             }else if (answer == 4){
@@ -155,7 +159,10 @@ public class Main {
 
                     System.out.println("");
 
+                }else{
+                    System.out.println("Invalid input");
                 }
+
             }else if (answer == 5){
                 System.out.println("[1] Press 1 to sort by distance ascending");
                 System.out.println("[2] Press 2 to sort by distance descending");
@@ -197,6 +204,8 @@ public class Main {
 
                     System.out.println("");
 
+                }else{
+                    System.out.println("Invalid input");
                 }
 
             } else if (answer == 6){
@@ -233,7 +242,21 @@ public class Main {
                 answer = options.nextInt();
 
                 if(answer == 1){
-                    //show_energy(1,activities_array);
+                    show_energy("Very Light", activities_array);
+
+                } else if (answer == 2) {
+                    show_energy("Light", activities_array);
+
+                } else if (answer == 3) {
+                    show_energy("Moderate", activities_array);
+
+                } else if (answer == 4) {
+                    show_energy("Vigorous", activities_array);
+
+                } else if (answer == 5) {
+                    show_energy("Very Vigorous", activities_array);
+                }else{
+                    System.out.println("Invalid input");
                 }
 
             } else if (answer == 10) {
@@ -273,12 +296,14 @@ public class Main {
         }
     }
 
-//    public static void show_energy(int energy_level, ArrayList <Activity> list){
-//        for (Activity activity: list) {
+    public static void show_energy(String energy_level, ArrayList <Activity> list){
+        for (Activity activity: list) {
+            if (activity.getEnergy().equals(energy_level)){
+                System.out.println(activity);
+            }
+        }
+    }
 //
-//        }
-//    }
-//activity.getEnergy() == energy_level
     public static double average_dist (ArrayList < Activity > activities_array, String type){
 
         double dis_count = 0;
