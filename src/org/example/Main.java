@@ -29,12 +29,12 @@ public class Main {
             System.out.println("[2] Press 2 to sort by date");
             System.out.println("[3] Press 3 to sort by duration");
             System.out.println("[4] Press 4 to sort by activity type");
-            System.out.println("[5] Press 5 to sort by distance type");
+            System.out.println("[5] Press 5 to sort by distance");
             System.out.println("[6] Press 6 to show calories burned");
             System.out.println("[7] Press 7 to show average distance per activity");
             System.out.println("[8] Press 8 to show above a minimum distance");
             System.out.println("[9] Press 9 to show type of energy ");
-            System.out.println("[10] Press 10 to show type of energy ");
+            System.out.println("[10] Press 10 show above a minimum duration");
             System.out.println("[0] Press 0 to stop the program");
 
             //input
@@ -260,7 +260,7 @@ public class Main {
                 }
 
             } else if (answer == 10) {
-                System.out.println("Input what is the minimum distance in integers: ");
+                System.out.println("Input what is the minimum duration in integers: ");
 
                 Scanner options = new Scanner(System.in);
                 answer = options.nextInt();
