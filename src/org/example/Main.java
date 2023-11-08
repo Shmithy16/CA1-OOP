@@ -2,7 +2,7 @@ package org.example;
 
 import java.util.*;
 
-// activities_array, Comparator.comparingDouble(Activity::getDuration)
+// github: https://github.com/Shmithy16/CA1-OOP
 public class Main {
     public static void main(String[] args) {
         // variables
