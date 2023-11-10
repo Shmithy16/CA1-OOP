@@ -303,7 +303,7 @@ public class Main {
             }
         }
     }
-//
+
     public static double average_dist (ArrayList < Activity > activities_array, String type){
 
         double dis_count = 0;

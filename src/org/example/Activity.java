@@ -2,7 +2,7 @@ package org.example;
 
 import java.util.Date;
 
-//
+
 abstract class Activity implements Comparable <Activity> {
 
     private Date date;

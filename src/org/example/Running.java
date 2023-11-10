@@ -3,7 +3,6 @@ package org.example;
 import java.util.Date;
 
 public class Running extends Activity {
-
     private double intensity;
 
     public Running(Date date, double duration, double distance, int ahr) {
